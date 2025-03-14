@@ -10,4 +10,13 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
+# Load environment variables from .env file
+if [ -f "$HOME/.env" ]; then
+  export $(grep -v '^#' $HOME/.env | xargs)
+fi
+
 # Customize to your needs...
+ulimit -n 200000
+ulimit -u 2048
+
+alias reload="exec zsh"

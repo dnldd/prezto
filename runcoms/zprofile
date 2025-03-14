@@ -17,10 +17,9 @@ fi
 # Editors
 #
 
-export EDITOR='nano'
-export VISUAL='nano'
+export EDITOR='code'
+export VISUAL='code'
 export PAGER='less'
-
 #
 # Language
 #
@@ -43,6 +42,11 @@ typeset -gU cdpath fpath mailpath path
 
 # Set the list of directories that Zsh searches for programs.
 path=(
+  /opt/homebrew/bin
+  /Users/dnldd/go/bin
+  /Users/dnldd/bin
+  /opt/homebrew/opt/llvm/bin
+  /opt/homebrew/opt/openssl/bin
   /usr/local/{bin,sbin}
   $path
 )
