@@ -11,6 +11,10 @@
 
 # Kubectl
 alias k='kubectl'
+alias kill='k delete'
+alias kg='k get'
+alias kd='k describe'
+alias kapi='k api-resources'
 
 # Context management
 alias kgn='k get nodes'
@@ -29,13 +33,12 @@ alias kgpw='k get pods -o wide'
 alias kdp='k describe pod'
 alias klp='k logs'
 alias kep='k exec -it'
-alias kdp='k delete pod'
+
 
 # Deployment management
 alias kgd='k get deployments'
 alias kdd='k describe deployment'
 alias krr='k rollout restart deployment'
-alias kdld='k delete deployment'
 
 # Service management
 alias kgs='k get services'
@@ -44,7 +47,6 @@ alias kgsw= 'k get service -o wide'
 
 # Resource management
 alias ka='k apply -f'
-alias kd='k delete -f'
 
 # ConfigMaps & secrets management
 alias kgc='k get configmaps'
